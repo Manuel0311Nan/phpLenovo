@@ -292,7 +292,7 @@ include "bd.php"
    <h5>Toma la delantera en la carrera crean oportunidades usando nuestros paquetes a precios competitivos</h5>
    <div class="row">
     <div class="col-4 bundle bundleRed col-sm-4 col-md-4 rowRight1">
-        <img class= "imgServers img-fluid" src="./assets/images/ban_Mesa1.png" alt="imageServer">
+        <img class= "imgServers img-fluid" src="./assets/images/ban_Mesa1.png"alt="imageServer">
         <ul>
             <li>Cabina Lenovo DM3000H (doble controladora activo/activo) 16Gb Fc/10Gb Opt</li>
             <li>Licencia Ontap Unified Fundamentals(San, NAS, Object)</li>
@@ -324,7 +324,7 @@ include "bd.php"
     </div>
 
 
-<form action="index.php" method="POST">
+<form action="registro.php" method="POST">
 <h3>Suscríbete para recibir todas las noticias</h3>
 <div class="mb-3 col-md-7 col-xl-5">
   <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">

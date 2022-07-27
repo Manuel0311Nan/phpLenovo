@@ -1,9 +1,16 @@
 <?php
+session_start();
 
-$server  ="localhost";
+// $conn = mysqli_connect(
+//     'localhost',
+//     'root',
+//     '',
+//     'BBDD_lenovo'
+// );
+$server = "localhost";
 $user = "root";
-$pass ="";
-$database= "bbdd_lenovo";
+$pass = "";
+$database="BBDD_lenovo";
 
 function connectServer($server, $user, $pass, $database)
 {
