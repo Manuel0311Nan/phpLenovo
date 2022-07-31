@@ -1,12 +1,5 @@
 <?php
-session_start();
 
-// $conn = mysqli_connect(
-//     'localhost',
-//     'root',
-//     '',
-//     'BBDD_lenovo'
-// );
 $server = "localhost";
 $user = "root";
 $pass = "";
