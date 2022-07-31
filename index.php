@@ -1,15 +1,26 @@
 <?php
-require "index.html.php";
+require ('index.html.php');
 require "registro.php";
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+// require ('./Ayudas/functions.php');
+$mysqli = include_once "bd.php";
+
+//conexión a BBDD
+// connectServer($server, $user, $pass, $database);
+// $server = "localhost";
+// $user = "root";
+// $pass = "";
+// $database="BBDD_lenovo";
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
 
-require 'Exception.php';
-require 'PHPMailer.php';
-require 'SMTP.php';
+
 
 $mail = new PHPMailer(true);
 
@@ -28,7 +39,8 @@ try {
 
     //Recipients
     $mail->setFrom('manukvothe@hotmail.com', 'Manuel');
-    $mail->addAddress($email, $nombre);     //Add a recipient
+    // $mail->addAddress($email, $nombre);    
+        $mail->addAddress('manuzz3112@gmail.com', 'Manu');     //Add a recipient
     // $mail->addAddress('ellen@example.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');

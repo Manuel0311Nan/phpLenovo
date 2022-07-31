@@ -1,5 +1,4 @@
 <?php
-include "bd.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -332,7 +331,7 @@ include "bd.php"
 <div class="mb-3 col-md-7 col-xl-5 ">
   <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Email@example.com">
 </div>
-   <input class="btn btn-danger" type="submit">
+   <input class="btn btn-danger" type="submit" name="register">
    </form>
     <footer>
     <img class="logoLenovo"  src="./assets/images/lenovo.png"  alt="">
