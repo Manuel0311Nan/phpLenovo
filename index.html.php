@@ -1,6 +1,7 @@
 <?php
-require_once "bd.php";
-require_once "mailer/PHPMailer.php"
+require_once(dirname(__FILE__) . '/Ayudas/functions.php');
+require_once(dirname(__FILE__) . '/config/config.php');
+$conexion = connectServer(SERVER, USER, PASS, DATABASE);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -333,7 +334,7 @@ require_once "mailer/PHPMailer.php"
 <div class="mb-3 col-md-7 col-xl-5 ">
   <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Email@example.com">
 </div>
-   <input class="btn btn-danger" type="submit">
+   <input class="btn btn-danger" type="submit" name="register">
    </form>
     <footer>
     <img class="logoLenovo"  src="./assets/images/lenovo.png"  alt="">
@@ -343,18 +344,3 @@ require_once "mailer/PHPMailer.php"
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
-<!-- <?php
-use PHPMailer\PHPMailer\PHPMailer;
-require 'vendor/autoload.php';
-require "includes/class.phpmailer.php";
-$mail = new PHPMailer();
-$mail -> Mailer = "smtp";
-
-      $mail->Subject = "Prueba de phpmailer";
-      $mail->Body = "<b>Mensaje de prueba mandado con phpmailer  en formato html</b>";
-      $mail->AltBody ="Mensaje de prueba mandado con phpmailer en formato texto";
-
-      $mail->Timeout=120;
-?> -->

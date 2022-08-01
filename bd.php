@@ -1,10 +1,4 @@
 <?php
-// require_once(dirname(__FILE__) . '/functions.php');
-// $conexion = connectServer(SERVER, USER, PASS, DATABASE);
-
-//Datos recibidos desde el Frontend
-// $email = trim(strip_tags($_POST['name']));
-// $contraseña = md5(trim(strip_tags($_POST['email'])));
 
 // session_start();
 
@@ -12,13 +6,19 @@
 //     'localhost',
 //     'root',
 //     '',
-//     'BBDD_lenovo'
+//     'bbdd_lenovo'
 // );
+
 // $server = "localhost";
 // $user = "root";
 // $pass = "";
-// $database="BBDD_lenovo";
+// $database="lenovo";
 
+// $mysqli = new mysqli($server, $user, $pass, $database);
+// if($mysqli->connect_errno){
+//   echo "falló la conexión a mysql: (" . $myslqi ->connect_errno . ") ";
+// }
+// return $mysqli;
 // function connectServer($server, $user, $pass, $database)
 // {
 //   try {
@@ -28,4 +28,10 @@
 //     echo $e->getMessage();
 //   }
 // }
+
+//     echo 'Conexión realizada';
+//   } catch (PDOException $e) {
+//     echo $e->getMessage();
+//   }
+// };
 ?>

@@ -33,6 +33,7 @@ function connectServer($server, $user, $pass, $database)
 {
   try {
     $dsn = "mysql:host=$server;dbname=$database;charset=utf8";
+    echo "Conectado adecuadamente";
     return new PDO($dsn, $user, $pass);
   } catch (PDOException $e) {
     echo $e->getMessage();
