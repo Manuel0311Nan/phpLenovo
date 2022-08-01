@@ -1,5 +1,6 @@
 <?php
-include "bd.php"
+require_once "bd.php";
+require_once "mailer/PHPMailer.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -343,3 +344,17 @@ include "bd.php"
   </body>
 </html>
 
+
+<!-- <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
+require "includes/class.phpmailer.php";
+$mail = new PHPMailer();
+$mail -> Mailer = "smtp";
+
+      $mail->Subject = "Prueba de phpmailer";
+      $mail->Body = "<b>Mensaje de prueba mandado con phpmailer  en formato html</b>";
+      $mail->AltBody ="Mensaje de prueba mandado con phpmailer en formato texto";
+
+      $mail->Timeout=120;
+?> -->
