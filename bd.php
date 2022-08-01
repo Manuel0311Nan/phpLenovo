@@ -9,22 +9,26 @@
 //     'bbdd_lenovo'
 // );
 
-$server= 'localhost';
-$user = 'root';
-$pass = "";
-$database = "bbdd_lenovo";
+// $server = "localhost";
+// $user = "root";
+// $pass = "";
+// $database="lenovo";
 
-$mysqli = new mysqli($server, $user, $pass, $database);
-if($mysqli->connect_errno){
-  echo "falló la conexión a mysql: (" . $myslqi ->connect_errno . ") ";
-}
-return $mysqli;
-
+// $mysqli = new mysqli($server, $user, $pass, $database);
+// if($mysqli->connect_errno){
+//   echo "falló la conexión a mysql: (" . $myslqi ->connect_errno . ") ";
+// }
+// return $mysqli;
 // function connectServer($server, $user, $pass, $database)
 // {
 //   try {
 //     $dsn = "mysql:host=$server;dbname=$database;charset=utf8";
 //     return new PDO($dsn, $user, $pass);
+//   } catch (PDOException $e) {
+//     echo $e->getMessage();
+//   }
+// }
+
 //     echo 'Conexión realizada';
 //   } catch (PDOException $e) {
 //     echo $e->getMessage();

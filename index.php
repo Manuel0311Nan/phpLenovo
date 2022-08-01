@@ -1,24 +1,18 @@
 <?php
-require ('index.html.php');
+require_once(dirname(__FILE__) . '/Ayudas/functions.php');
+
+
+require 'index.html.php';
 require "registro.php";
-require 'Exception.php';
-require 'PHPMailer.php';
-require 'SMTP.php';
-// require ('./Ayudas/functions.php');
-$mysqli = include_once "bd.php";
-
-//conexión a BBDD
-// connectServer($server, $user, $pass, $database);
-// $server = "localhost";
-// $user = "root";
-// $pass = "";
-// $database="BBDD_lenovo";
-
+require './mailer/Exception.php';
+require './mailer/PHPMailer.php';
+require './mailer/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
+$conexion = connectServer(SERVER, USER, PASS, DATABASE);
 
 
 
@@ -33,7 +27,7 @@ try {
     $mail->Username   = 'manukvothe@hotmail.com';                     //SMTP username
     $mail->Password   = 'Garethbalecr94';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                                                             //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Port       = 443;                                                                             //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->SMTPDebug = 2;
     $mail->SMTPSecure = 'ssl';
 
