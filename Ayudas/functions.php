@@ -32,8 +32,7 @@ function checkConnection($element)
 function connectServer($server, $user, $pass, $database)
 {
   try {
-    $dsn = "mysql:host=$server;dbname=$database;charset=utf8";
-    echo "Conectado adecuadamente";
+    $dsn = "mysql:host=$server;dbname=$database";
     return new PDO($dsn, $user, $pass);
   } catch (PDOException $e) {
     echo $e->getMessage();
