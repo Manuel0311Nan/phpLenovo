@@ -1,0 +1,9 @@
+{
+    "name": "manuk/login",
+    "autoload": {
+        "psr-4": {
+            "Manuk\\Login\\": "src/"
+        }
+    },
+    "require": {}
+}

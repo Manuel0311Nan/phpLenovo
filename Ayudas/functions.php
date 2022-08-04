@@ -87,16 +87,16 @@ function reDirect($element)
 //Envia correos electrónicos
 function sendEmail($email, $asunto, $body)
 {
-  require_once(dirname(__FILE__).'/mailer/PHPMailer.php');
-  require_once(dirname(__FILE__).'/mailer/SMTP.php');
-  require_once(dirname(__FILE__).'/mailer/Exception.php');
+  require_once(dirname(__FILE__).'../../mailer/PHPMailer.php');
+  require_once(dirname(__FILE__).'../../mailer/SMTP.php');
+  require_once(dirname(__FILE__).'../../mailer/Exception.php');
 
   $recipients = $email;
 
 
   $mail = new PHPMailer\PHPMailer\PHPMailer();
   $mail->isSMTP();
-  $mail->Mailer = "SMTP";
+
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = "ssl";
   $mail->isHTML(true);
@@ -104,13 +104,14 @@ function sendEmail($email, $asunto, $body)
   $mail->Port = 465;
   $mail->CharSet = 'UTF-8';
   $mail->Host = "smtp.serviciodecorreo.es";
-  $mail->Username = "";
-  $mail->Password = '';
+  $mail->Username = "manuelcodex23@gmail.com";
+  $mail->Password = 'omcvchxkvcdsztae';
   $mail->FromName = "ZEDIS";
   $mail->Encoding = "base64";
   $mail->DKIM_passphrase = '';
   $mail->DKIM_identity = $mail->From;
   $mail->setFrom('', 'ZEDIS');
+
   if (is_array($email)) {
     foreach ($recipients as $email) {
       $mail->addCC($email);
@@ -125,6 +126,7 @@ function sendEmail($email, $asunto, $body)
     return "Error in sending email. Mailer Error: {$mail->ErrorInfo}";
   } else {
     return "Enviado con éxito.";
+
   }
 }
 function returnbody($nombre){
