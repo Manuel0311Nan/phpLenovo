@@ -1,12 +1,13 @@
 <?php
-require_once(dirname(__FILE__) . '/Ayudas/functions.php');
-
+require_once('./Ayudas/functions.php');
+require_once('./config/config.php');
+$conexion = connectServer(SERVER, USER, PASS, DATABASE);
 
 require 'index.html.php';
 require "registro.php";
-// require './mailer/Exception.php';
-// require './mailer/PHPMailer.php';
-// require './mailer/SMTP.php';
+require './mailer/Exception.php';
+require './mailer/PHPMailer.php';
+require './mailer/SMTP.php';
 
 require './vendor/autoload.php';
 
@@ -14,24 +15,26 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-$email = 'manuzz3112@gmail.com';
-$asunto = 'Mensaje de prueba';
-$body = 'Texto de prueba';
-$recipients = $email;
-sendEmail($email, $asunto, $body);
+// $email = ;
+// $asunto = ;
+// $body = ;
+// $recipients = $email;
 
+$mail = new PHPMailer();
+sendEmail('manuzz3112@gmail.com', 'Mensaje de prueba','Texto de prueba');
 
+// $mail = new PHPMailer(true);
 // try {
 //     //Server settings
-//     $mail = new PHPMailer(true);
-//     $mail->isSMTP(true); 
+//     $mail->isSMTP(); 
+//     $mail->SMTPAuth = true;
+//     $mail->SMTPSecure = "ssl";
 //     $mail->Mailer = "SMTP";
 //     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 //     $mail->Host       = 'smtp.gmail.com';
-//     $mail->Port       = 587;
+//     $mail->Port       = 443;
 //     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-//     $mail->SMTPAuth   = true;
-//     $mail->Username   = 'manuelcodex23@gmail.com';
+//     $mail->Username   = 'manuzz3112@gmail.com';
 //     $mail->Password   = 'omcvchxkvcdsztae';
 
 //     $mail->CharSet ='UTF-8';

@@ -96,21 +96,21 @@ function sendEmail($email, $asunto, $body)
 
   $mail = new PHPMailer\PHPMailer\PHPMailer();
   $mail->isSMTP();
-
+  $mail->Host = "smtp.serviciodecorreo.es";
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = "ssl";
+  $mail->Username = "manuelcodex23@gmail.com";
+  $mail->Password = 'omcvchxkvcdsztae';
   $mail->isHTML(true);
   // $mail->SMTPAutoTLS = true;
   $mail->Port = 465;
   $mail->CharSet = 'UTF-8';
-  $mail->Host = "smtp.serviciodecorreo.es";
-  $mail->Username = "manuelcodex23@gmail.com";
-  $mail->Password = 'omcvchxkvcdsztae';
+  $mail->isHTML(true);
   $mail->FromName = "ZEDIS";
   $mail->Encoding = "base64";
   $mail->DKIM_passphrase = '';
   $mail->DKIM_identity = $mail->From;
-  $mail->setFrom('', 'ZEDIS');
+  $mail->setFrom('manuelcodex23@gmail.com', 'Manuel');
 
   if (is_array($email)) {
     foreach ($recipients as $email) {
