@@ -99,8 +99,8 @@ function sendEmail($email, $asunto, $body)
   $mail->Host = "smtp.serviciodecorreo.es";
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = "ssl";
-  $mail->Username = "manuelcodex23@gmail.com";
-  $mail->Password = 'omcvchxkvcdsztae';
+  $mail->Username = "malcazar@azkenservices.com";
+  $mail->Password = 'azk44MUGA';
   $mail->isHTML(true);
   // $mail->SMTPAutoTLS = true;
   $mail->Port = 465;
@@ -110,7 +110,7 @@ function sendEmail($email, $asunto, $body)
   $mail->Encoding = "base64";
   $mail->DKIM_passphrase = '';
   $mail->DKIM_identity = $mail->From;
-  $mail->setFrom('manuelcodex23@gmail.com', 'Manuel');
+  $mail->setFrom('malcazar@azkenservices.com', 'Manuel');
 
   if (is_array($email)) {
     foreach ($recipients as $email) {
