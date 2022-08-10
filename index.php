@@ -15,12 +15,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-// $email = ;
-// $asunto = ;
-// $body = ;
+$email = 'manuzz3112@gmail.com';
+$asunto = 'Asunto de prueba';
+$body = 'Mensaje de prueba';
 // $recipients = $email;
 
 $mail = new PHPMailer();
-sendEmail('manuzz3112@gmail.com', 'Mensaje de prueba','Texto de prueba');
+sendEmail($email, $asunto, $body);
 
     ?>
